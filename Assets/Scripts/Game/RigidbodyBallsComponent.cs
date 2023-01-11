@@ -1,13 +1,12 @@
-using System;
 using CollectBallsGame;
 using UnityEngine;
 
-namespace Balls
+namespace Game
 {
-    public class RigidbodyBallsComponent : CollectGameComponent
+    public class RigidbodyBallsComponent : GameComponent
     {
-        private CollectGameModel _gameModel;
-        private CollectGameScene _gameScene;
+        private GameModel _gameModel;
+        private GameScene _gameScene;
         
         private Rigidbody2D _rigidbody2D;
 
@@ -16,7 +15,7 @@ namespace Balls
             _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         }
 
-        public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
+        public override void Initialize(GameModel gameModel, GameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;

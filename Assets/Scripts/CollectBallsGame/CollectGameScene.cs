@@ -1,5 +1,6 @@
 using Balls;
 using Basket;
+using CollectButton;
 using UnityEngine;
 
 namespace CollectBallsGame
@@ -16,14 +17,14 @@ namespace CollectBallsGame
         public RandomSpawnerBallsComponent RandomSpawnerBallsComponent;
         public RandomSpawnerColorBallsComponent SpawnerColorBallsComponent;
         
-        public CollectPopupGameOverComponent PopupGameOverComponent;
-        public CollectPopupLevelCompletedComponent PopupLevelCompletedComponent;
-        public CollectPopupPauseComponent PopupPauseComponent;
-
-        public ButtonNextLevelComponent ButtonNextLevelComponent;
-        public ButtonReturnComponent ButtonReturnComponent;
-        public ButtonContinueComponent ButtonContinueComponent;
-        public ButtonMenuComponent[] ButtonMenuComponent;
+        public CollectPopupGameOverComponent CollectPopupGameOverComponent;
+        public CollectPopupLevelCompletedComponent CollectPopupLevelCompletedComponent;
+        public CollectPopupPauseComponent CollectPopupPauseComponent;
+        
+        public CollectButtonNextLevelComponent CollectButtonNextLevelComponent;
+        public CollectButtonReturnComponent CollectButtonReturnComponent;
+        public CollectButtonContinueComponent CollectButtonContinueComponent;
+        public CollectButtonMenuComponent[] CollectButtonMenuComponent;
         
         public int FailedBallsLooseValue;
         public int TotalCollectBalls;

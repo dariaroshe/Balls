@@ -2,6 +2,7 @@ using System;
 using Balls;
 using CollectBallsGame;
 using Game;
+using Service;
 using UnityEngine;
 
 namespace Basket
@@ -22,11 +23,11 @@ namespace Basket
             var ballComponent = other.GetComponent<BallComponent>();
             var colorIndex = _gameScene.SpawnerColorBallsComponent.RandomColorBall;
             
-            if (colorIndex == ballComponent.Type && _gameModel.GameState.Value == GameState.Playing)
+            if (colorIndex == ballComponent.Type && _gameModel.CollectGameState.Value == CollectGameState.Playing)
             {
                 _gameModel.Score.Value++;
             }
-            else if (colorIndex != ballComponent.Type && _gameModel.GameState.Value == GameState.Playing)
+            else if (colorIndex != ballComponent.Type && _gameModel.CollectGameState.Value == CollectGameState.Playing)
             {
                 _gameModel.FailedBalls.Value--;
             }

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using CollectBallsGame;
+using Service;
 using UnityEngine;
 
 namespace Balls
 {
     public class RandomSpawnerBallsComponent : CollectGameComponent
     {
-        [SerializeField] private RigidbodyBallsComponent[] _spawnBalls;
+        [SerializeField] private CollectRigidbodyBallsComponent[] _spawnBalls;
         [SerializeField] private List<Transform> _spawnPoint;
         
         private CollectGameModel _gameModel;
@@ -31,7 +32,7 @@ namespace Balls
                 var randomIndexBalls = Random.Range(0, _spawnBalls.Length);
                 var randomIndexPoint = Random.Range(0, _spawnPoint.Count);
                 
-                if (_gameModel.GameState.Value == GameState.Playing)
+                if (_gameModel.CollectGameState.Value == CollectGameState.Playing)
                 {
                     var ball = Instantiate(_spawnBalls[randomIndexBalls], _spawnPoint[randomIndexPoint].transform.position,
                         Quaternion.identity);

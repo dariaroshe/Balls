@@ -1,17 +1,17 @@
-using Balls;
+using CollectBallsGame;
+using Game;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace CollectBallsGame
+namespace Popup
 {
-    public class CollectPopupLevelCompletedComponent : CollectGameComponent
+    public class PopupLevelCompletedComponent : GameComponent
     {
-        private CollectGameModel _gameModel;
-        private CollectGameScene _gameScene;
+        private GameModel _gameModel;
+        private GameScene _gameScene;
 
         public GameObject PopupLevelCompleted;
 
-        public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
+        public override void Initialize(GameModel gameModel, GameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
@@ -26,7 +26,7 @@ namespace CollectBallsGame
 
         private void OnScoreChanged()
         {
-            if (_gameModel.Score.Value == _gameScene.TotalCollectBalls)
+            if (_gameModel.Score.Value >= _gameScene.MinAmountCollectBalls)
             {
                 PopupLevelCompleted.SetActive(true);
                 _gameModel.GameState.Value = GameState.LevelCompleted;

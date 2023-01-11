@@ -1,37 +1,36 @@
-using System;
 using Balls;
+using Service;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace CollectBallsGame
 {
-    public class CollectPopupGameOverComponent : CollectGameComponent
+    public class CollectPopupLevelCompletedComponent : CollectGameComponent
     {
         private CollectGameModel _gameModel;
         private CollectGameScene _gameScene;
-        
-        public GameObject PopupGameOver;
-        
+
+        public GameObject PopupLevelCompleted;
 
         public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
             
-            _gameModel.FailedBalls.Changed += OnFailedBallsChanged;
+            _gameModel.Score.Changed += OnScoreChanged;
         }
 
         private void OnDestroy()
         {
-            _gameModel.FailedBalls.Changed -= OnFailedBallsChanged;
+            _gameModel.Score.Changed -= OnScoreChanged;
         }
 
-        private void OnFailedBallsChanged()
+        private void OnScoreChanged()
         {
-            if (_gameModel.FailedBalls.Value == 0)
+            if (_gameModel.Score.Value == _gameScene.TotalCollectBalls)
             {
-                PopupGameOver.SetActive(true);
-                _gameModel.GameState.Value = GameState.GameOver;
+                PopupLevelCompleted.SetActive(true);
+                _gameModel.CollectGameState.Value = CollectGameState.LevelCompleted;
             }
         }
     }

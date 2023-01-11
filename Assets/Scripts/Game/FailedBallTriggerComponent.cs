@@ -16,7 +16,11 @@ namespace Game
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            _gameModel.FailedBalls.Value++;
+            if (_gameModel.GameState.Value == GameState.Playing)
+            {
+                _gameModel.FailedBalls.Value++;
+            }
+            
             Destroy(other.gameObject);
         }
     }

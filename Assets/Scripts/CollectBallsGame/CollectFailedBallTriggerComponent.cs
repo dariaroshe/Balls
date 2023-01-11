@@ -1,6 +1,7 @@
 using System;
 using Balls;
 using Game;
+using Service;
 using UnityEngine;
 
 namespace CollectBallsGame
@@ -21,7 +22,7 @@ namespace CollectBallsGame
             var ballComponent = other.GetComponent<BallComponent>();
             var colorIndex = _gameScene.SpawnerColorBallsComponent.RandomColorBall;
             
-            if(colorIndex == ballComponent.Type && _gameModel.GameState.Value == GameState.Playing)
+            if(colorIndex == ballComponent.Type && _gameModel.CollectGameState.Value == CollectGameState.Playing)
             {
                 _gameModel.FailedBalls.Value--;
             }

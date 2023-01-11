@@ -1,5 +1,7 @@
 using Balls;
 using Basket;
+using GameButton;
+using Popup;
 using TMPro;
 using UnityEngine;
 
@@ -10,8 +12,20 @@ namespace Game
         public BasketTriggerComponent BasketTriggerComponent;
         public FailedBallTriggerComponent[] FailedBallTriggerComponent;
         public ScoreTextComponent ScoreText;
-        public GameOverComponent GameOverComponent;
+
+        public RigidbodyBallsComponent[] RigidbodyBallsComponent;
+        
+        public PopupGameOverComponent PopupGameOverComponent;
+        public PopupLevelCompletedComponent PopupLevelCompletedComponent;
+        public PopupPauseComponent PopupPauseComponent;
+        
+        public ButtonNextLevelComponent ButtonNextLevelComponent;
+        public ButtonReturnComponent ButtonReturnComponent;
+        public ButtonContinueComponent ButtonContinueComponent;
+        public ButtonMenuComponent[] ButtonMenuComponent;
         
         public int FailedBallsLooseValue;
+        public int MinAmountCollectBalls;
+        public string NextLevel;
     }
 }

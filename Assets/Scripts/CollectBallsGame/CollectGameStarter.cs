@@ -17,19 +17,19 @@ namespace CollectBallsGame
             CollectGameScene.MovingBasketTriggerComponent.Initialize(gameModel, CollectGameScene);
             CollectGameScene.ScoreTextComponent.Initialize(gameModel, CollectGameScene);
             CollectGameScene.FailedBallTriggerComponent.Initialize(gameModel, CollectGameScene);
-            CollectGameScene.PopupGameOverComponent.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectPopupGameOverComponent.Initialize(gameModel, CollectGameScene);
             CollectGameScene.ScoreHealthBarComponent.Initialize(gameModel, CollectGameScene);
-            CollectGameScene.PopupLevelCompletedComponent.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectPopupLevelCompletedComponent.Initialize(gameModel, CollectGameScene);
             CollectGameScene.RandomSpawnerBallsComponent.Initialize(gameModel, CollectGameScene);
             CollectGameScene.MovingBasketComponent.Initialize(gameModel, CollectGameScene);
-            CollectGameScene.PopupPauseComponent.Initialize(gameModel, CollectGameScene);
-            CollectGameScene.ButtonNextLevelComponent.Initialize(gameModel, CollectGameScene);
-            CollectGameScene.ButtonReturnComponent.Initialize(gameModel, CollectGameScene);
-            CollectGameScene.ButtonContinueComponent.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectPopupPauseComponent.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectButtonNextLevelComponent.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectButtonReturnComponent.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectButtonContinueComponent.Initialize(gameModel, CollectGameScene);
 
-            for (int i = 0; i < CollectGameScene.ButtonMenuComponent.Length; i++)
+            for (int i = 0; i < CollectGameScene.CollectButtonMenuComponent.Length; i++)
             {
-                CollectGameScene.ButtonMenuComponent[i].Initialize(gameModel, CollectGameScene);
+                CollectGameScene.CollectButtonMenuComponent[i].Initialize(gameModel, CollectGameScene);
             }
         }
     }

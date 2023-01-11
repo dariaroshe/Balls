@@ -1,19 +1,19 @@
-using System;
+using CollectBallsGame;
+using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace CollectBallsGame
+namespace GameButton
 {
-    public class ButtonNextLevelComponent : CollectGameComponent
+    public class ButtonNextLevelComponent : GameComponent
     {
         [SerializeField] private Button _buttonNextLevel;
-        [SerializeField] private string _nextLevel;
         
-        private CollectGameModel _gameModel;
-        private CollectGameScene _gameScene;
+        private GameModel _gameModel;
+        private GameScene _gameScene;
 
-        public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
+        public override void Initialize(GameModel gameModel, GameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
@@ -28,7 +28,7 @@ namespace CollectBallsGame
 
         private void OnButtonClick()
         {
-            SceneManager.LoadScene(_nextLevel);
+            SceneManager.LoadScene(_gameScene.NextLevel);
         }
     }
 }

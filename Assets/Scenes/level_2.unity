@@ -3821,17 +3821,17 @@ MonoBehaviour:
   ScoreTextComponent: {fileID: 1383172185}
   RandomSpawnerBallsComponent: {fileID: 1764894812}
   SpawnerColorBallsComponent: {fileID: 1745564382}
-  PopupGameOverComponent: {fileID: 1747957994}
-  PopupLevelCompletedComponent: {fileID: 432015001}
-  PopupPauseComponent: {fileID: 2064453745}
-  ButtonNextLevelComponent: {fileID: 432014999}
-  ButtonReturnComponent: {fileID: 1747957993}
-  ButtonContinueComponent: {fileID: 2064453744}
-  ButtonMenuComponent:
+  CollectPopupGameOverComponent: {fileID: 1747957994}
+  CollectPopupLevelCompletedComponent: {fileID: 432015001}
+  CollectPopupPauseComponent: {fileID: 2064453745}
+  CollectButtonNextLevelComponent: {fileID: 432014999}
+  CollectButtonReturnComponent: {fileID: 1747957993}
+  CollectButtonContinueComponent: {fileID: 2064453744}
+  CollectButtonMenuComponent:
   - {fileID: 1747957995}
   - {fileID: 432015000}
   - {fileID: 2064453746}
-  FailedBallsLooseValue: 5
+  FailedBallsLooseValue: 6
   TotalCollectBalls: 1
 --- !u!4 &1786926888
 Transform:

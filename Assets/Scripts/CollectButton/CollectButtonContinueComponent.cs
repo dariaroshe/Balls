@@ -1,10 +1,11 @@
+using CollectBallsGame;
+using Service;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace CollectBallsGame
+namespace CollectButton
 {
-    public class ButtonContinueComponent : CollectGameComponent
+    public class CollectButtonContinueComponent : CollectGameComponent
     {
         [SerializeField] private Button _buttonContinue;
 
@@ -26,11 +27,11 @@ namespace CollectBallsGame
 
         private void OnButtonClick()
         {
-            if (_gameModel.GameState.Value == GameState.Paused)
+            if (_gameModel.CollectGameState.Value == CollectGameState.Paused)
             {
-                var popupPause = _gameScene.PopupPauseComponent.PopupPause;
+                var popupPause = _gameScene.CollectPopupPauseComponent.PopupPause;
                 popupPause.SetActive(false);
-                _gameModel.GameState.Value = GameState.Playing;
+                _gameModel.CollectGameState.Value = CollectGameState.Playing;
             }
         }
     }

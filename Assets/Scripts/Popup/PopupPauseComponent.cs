@@ -1,16 +1,18 @@
-using System;
+using CollectBallsGame;
+using Game;
+using Service;
 using UnityEngine;
 
-namespace CollectBallsGame
+namespace Popup
 {
-    public class CollectPopupPauseComponent : CollectGameComponent
+    public class PopupPauseComponent : GameComponent
     {
-        private CollectGameModel _gameModel;
-        private CollectGameScene _gameScene;
+        private GameModel _gameModel;
+        private GameScene _gameScene;
 
         public GameObject PopupPause;
 
-        public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
+        public override void Initialize(GameModel gameModel, GameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;

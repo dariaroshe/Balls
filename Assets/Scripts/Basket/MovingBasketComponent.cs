@@ -1,5 +1,6 @@
 using System;
 using CollectBallsGame;
+using Service;
 using UnityEngine;
 
 namespace Basket
@@ -20,7 +21,7 @@ namespace Basket
         
         private void OnMouseDrag()
         {
-            if (_gameModel.GameState.Value == GameState.Playing)
+            if (_gameModel.CollectGameState.Value == CollectGameState.Playing)
             {
                 var mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

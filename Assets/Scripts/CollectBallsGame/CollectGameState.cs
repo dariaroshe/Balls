@@ -1,6 +1,6 @@
 namespace CollectBallsGame
 {
-    public enum GameState
+    public enum CollectGameState
     {
         Playing,
         Paused,
