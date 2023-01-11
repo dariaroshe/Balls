@@ -9,7 +9,6 @@ namespace CollectButton
     public class CollectButtonNextLevelComponent : CollectGameComponent
     {
         [SerializeField] private Button _buttonNextLevel;
-        [SerializeField] private string _nextLevel;
         
         private CollectGameModel _gameModel;
         private CollectGameScene _gameScene;
@@ -29,7 +28,9 @@ namespace CollectButton
 
         private void OnButtonClick()
         {
-            SceneManager.LoadScene(_nextLevel);
+            var nextLevel = _gameModel.CurrentLevel + 1;
+            var nextLevelName = _gameScene.LevelsData.LevelNames[nextLevel];
+            SceneManager.LoadScene(nextLevelName);
         }
     }
 }

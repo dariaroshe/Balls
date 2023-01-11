@@ -28,7 +28,9 @@ namespace GameButton
 
         private void OnButtonClick()
         {
-            SceneManager.LoadScene(_gameScene.NextLevel);
+            var nextLevel = _gameModel.CurrentLevel + 1;
+            var nextLevelName = _gameScene.LevelsData.LevelNames[nextLevel];
+            SceneManager.LoadScene(nextLevelName);
         }
     }
 }

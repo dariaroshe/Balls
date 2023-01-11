@@ -5598,8 +5598,17 @@ MonoBehaviour:
   BasketTriggerComponent: {fileID: 169387279}
   FailedBallTriggerComponent: []
   ScoreText: {fileID: 1043220202}
-  GameOverComponent: {fileID: 835814449}
+  RigidbodyBallsComponent: []
+  PopupGameOverComponent: {fileID: 0}
+  PopupLevelCompletedComponent: {fileID: 0}
+  PopupPauseComponent: {fileID: 0}
+  ButtonNextLevelComponent: {fileID: 0}
+  ButtonReturnComponent: {fileID: 0}
+  ButtonContinueComponent: {fileID: 0}
+  ButtonMenuComponent: []
   FailedBallsLooseValue: 5
+  MinAmountCollectBalls: 0
+  LevelsData: {fileID: 11400000, guid: b7f7d4c2df988ac46b5a16b160ebbe1e, type: 2}
 --- !u!4 &1847961127
 Transform:
   m_ObjectHideFlags: 0

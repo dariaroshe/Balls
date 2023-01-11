@@ -1,6 +1,7 @@
 using Balls;
 using Game;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CollectBallsGame
 {
@@ -10,7 +11,10 @@ namespace CollectBallsGame
         
         private void Awake()
         {
-            var gameModel = new CollectGameModel();
+            var currentSceneName = SceneManager.GetActiveScene().name;
+            var currentLevel = CollectGameScene.LevelsData.LevelNames.IndexOf(currentSceneName);
+            
+            var gameModel = new CollectGameModel(currentLevel);
 
             gameModel.FailedBalls.Value = CollectGameScene.FailedBallsLooseValue;
             

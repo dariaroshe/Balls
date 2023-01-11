@@ -1,6 +1,7 @@
 using Balls;
 using Basket;
 using CollectButton;
+using Levels;
 using UnityEngine;
 
 namespace CollectBallsGame
@@ -28,5 +29,6 @@ namespace CollectBallsGame
         
         public int FailedBallsLooseValue;
         public int TotalCollectBalls;
+        public LevelsData LevelsData;
     }
 }

@@ -1,6 +1,7 @@
 using Balls;
 using Basket;
 using GameButton;
+using Levels;
 using Popup;
 using TMPro;
 using UnityEngine;
@@ -26,6 +27,6 @@ namespace Game
         
         public int FailedBallsLooseValue;
         public int MinAmountCollectBalls;
-        public string NextLevel;
+        public LevelsData LevelsData;
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 namespace Game
 {
@@ -9,8 +11,11 @@ namespace Game
 
         private void Start()
         {
-            var gameModel = new GameModel();
+            var currentSceneName = SceneManager.GetActiveScene().name;
+            var currentLevel = GameScene.LevelsData.LevelNames.IndexOf(currentSceneName);
 
+            var gameModel = new GameModel(currentLevel);
+            
             GameScene.BasketTriggerComponent.Initialize(gameModel, GameScene);
             GameScene.ScoreText.Initialize(gameModel, GameScene);
             GameScene.PopupGameOverComponent.Initialize(gameModel, GameScene);
