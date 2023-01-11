@@ -26,6 +26,8 @@ namespace CollectBallsGame
         public CollectButtonReturnComponent CollectButtonReturnComponent;
         public CollectButtonContinueComponent CollectButtonContinueComponent;
         public CollectButtonMenuComponent[] CollectButtonMenuComponent;
+
+        public CollectGameSaveComponent CollectGameSaveComponent;
         
         public int FailedBallsLooseValue;
         public int TotalCollectBalls;

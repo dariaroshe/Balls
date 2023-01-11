@@ -24,6 +24,7 @@ namespace Game
             GameScene.ButtonNextLevelComponent.Initialize(gameModel, GameScene);
             GameScene.ButtonReturnComponent.Initialize(gameModel, GameScene);
             GameScene.ButtonContinueComponent.Initialize(gameModel, GameScene);
+            GameScene.GameSaveComponent.Initialize(gameModel, GameScene);
 
             for (int i = 0; i < GameScene.RigidbodyBallsComponent.Length; i++)
             {
