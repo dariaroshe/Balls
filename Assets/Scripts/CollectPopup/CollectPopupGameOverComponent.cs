@@ -10,29 +10,27 @@ namespace CollectBallsGame
     {
         private CollectGameModel _gameModel;
         private CollectGameScene _gameScene;
-        
+
         public GameObject PopupGameOver;
-        
 
         public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
-            
-            _gameModel.FailedBalls.Changed += OnFailedBallsChanged;
+
+            _gameModel.CollectGameState.Changed += OnFailedBallsChanged;
         }
 
         private void OnDestroy()
         {
-            _gameModel.FailedBalls.Changed -= OnFailedBallsChanged;
+            _gameModel.CollectGameState.Changed -= OnFailedBallsChanged;
         }
 
         private void OnFailedBallsChanged()
         {
-            if (_gameModel.FailedBalls.Value == 0)
+            if (_gameModel.CollectGameState.Value == CollectGameState.GameOver)
             {
                 PopupGameOver.SetActive(true);
-                _gameModel.CollectGameState.Value = CollectGameState.GameOver;
             }
         }
     }
