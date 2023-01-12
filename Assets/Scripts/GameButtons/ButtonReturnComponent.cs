@@ -1,24 +1,24 @@
-using CollectBallsGame;
+using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace CollectButton
+namespace GameButtons
 {
-    public class CollectButtonReturnComponent : CollectGameComponent
+    public class ButtonReturnComponent : GameComponent
     {
         [SerializeField] private Button _buttonReturn;
         [SerializeField] private string _returnLevel;
-        
-        private CollectGameModel _gameModel;
-        private CollectGameScene _gameScene;
 
-        public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
+        private GameModel _gameModel;
+        private GameScene _gameScene;
+
+        public override void Initialize(GameModel gameModel, GameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
-            
-            _buttonReturn.onClick.AddListener(OnButtonClick); 
+
+            _buttonReturn.onClick.AddListener(OnButtonClick);
         }
 
         private void OnDestroy()

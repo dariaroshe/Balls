@@ -1,8 +1,9 @@
+using MainMenu;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace MainMenu
+namespace MainMenuButtons
 {
     public class ButtonSelectLevelComponent : MainMenuComponent
     {

@@ -1,19 +1,18 @@
 using CollectBallsGame;
-using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GameButton
+namespace CollectButtons
 {
-    public class ButtonMenuComponent : GameComponent
+    public class CollectButtonMenuComponent : CollectGameComponent
     {
         [SerializeField] private Button _buttonMenu;
 
-        private GameModel _gameModel;
-        private GameScene _gameScene;
+        private CollectGameModel _gameModel;
+        private CollectGameScene _gameScene;
 
-        public override void Initialize(GameModel gameModel, GameScene gameScene)
+        public override void Initialize(CollectGameModel gameModel, CollectGameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;

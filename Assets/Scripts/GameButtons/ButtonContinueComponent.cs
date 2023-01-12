@@ -1,10 +1,8 @@
-using CollectBallsGame;
 using Game;
-using Service;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameButton
+namespace GameButtons
 {
     public class ButtonContinueComponent : GameComponent
     {

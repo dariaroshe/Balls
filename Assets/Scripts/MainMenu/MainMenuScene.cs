@@ -1,5 +1,5 @@
-using GameButton;
 using Levels;
+using MainMenuButtons;
 using UnityEngine;
 
 namespace MainMenu

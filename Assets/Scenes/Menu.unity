@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonPlayComponent: {fileID: 688811244}
+  ButtonSelectLevelComponent: {fileID: 688811245}
   LevelsData: {fileID: 11400000, guid: b7f7d4c2df988ac46b5a16b160ebbe1e, type: 2}
 --- !u!1 &1630446053
 GameObject:

@@ -3,12 +3,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace CollectButton
+namespace CollectButtons
 {
-    public class CollectButtonMenuComponent : CollectGameComponent
+    public class CollectButtonNextLevelComponent : CollectGameComponent
     {
-        [SerializeField] private Button _buttonMenu;
-
+        [SerializeField] private Button _buttonNextLevel;
+        
         private CollectGameModel _gameModel;
         private CollectGameScene _gameScene;
 
@@ -17,17 +17,19 @@ namespace CollectButton
             _gameModel = gameModel;
             _gameScene = gameScene;
             
-            _buttonMenu.onClick.AddListener(OnButtonClick); 
+            _buttonNextLevel.onClick.AddListener(OnButtonClick); 
         }
 
         private void OnDestroy()
         {
-            _buttonMenu.onClick.RemoveListener(OnButtonClick);
+            _buttonNextLevel.onClick.RemoveListener(OnButtonClick);
         }
 
         private void OnButtonClick()
         {
-            SceneManager.LoadScene("Menu");
+            var nextLevel = _gameModel.CurrentLevel + 1;
+            var nextLevelName = _gameScene.LevelsData.LevelNames[nextLevel];
+            SceneManager.LoadScene(nextLevelName);
         }
     }
 }

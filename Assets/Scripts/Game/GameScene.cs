@@ -1,6 +1,6 @@
 using Balls;
 using Basket;
-using GameButton;
+using GameButtons;
 using Levels;
 using Popup;
 using TMPro;

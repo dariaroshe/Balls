@@ -1,10 +1,9 @@
-using Game;
 using MainMenu;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GameButton
+namespace MainMenuButtons
 {
     public class ButtonPlayComponent : MainMenuComponent
     {

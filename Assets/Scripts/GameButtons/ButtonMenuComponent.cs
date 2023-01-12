@@ -1,15 +1,13 @@
-using CollectBallsGame;
 using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GameButton
+namespace GameButtons
 {
-    public class ButtonReturnComponent : GameComponent
+    public class ButtonMenuComponent : GameComponent
     {
-        [SerializeField] private Button _buttonReturn;
-        [SerializeField] private string _returnLevel;
+        [SerializeField] private Button _buttonMenu;
 
         private GameModel _gameModel;
         private GameScene _gameScene;
@@ -18,18 +16,18 @@ namespace GameButton
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
-
-            _buttonReturn.onClick.AddListener(OnButtonClick);
+            
+            _buttonMenu.onClick.AddListener(OnButtonClick); 
         }
 
         private void OnDestroy()
         {
-            _buttonReturn.onClick.RemoveListener(OnButtonClick);
+            _buttonMenu.onClick.RemoveListener(OnButtonClick);
         }
 
         private void OnButtonClick()
         {
-            SceneManager.LoadScene(_returnLevel);
+            SceneManager.LoadScene("Menu");
         }
     }
 }

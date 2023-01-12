@@ -1,6 +1,6 @@
 using Balls;
 using Basket;
-using CollectButton;
+using CollectButtons;
 using Levels;
 using UnityEngine;
 
