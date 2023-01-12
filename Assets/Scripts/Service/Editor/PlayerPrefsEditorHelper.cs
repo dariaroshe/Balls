@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Service.Editor
 {
-    public class ClearPlayerPrefs
+    public class PlayerPrefsEditorHelper
     {
-        [MenuItem("Window/Clear Player Prefs")]
+        [MenuItem("PlayerPrefs/Clear Player Prefs")]
         public static void DoClearPlayerPrefs()
         {
             PlayerPrefs.DeleteAll();
