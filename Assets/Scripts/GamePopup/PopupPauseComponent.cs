@@ -1,9 +1,7 @@
-using CollectBallsGame;
 using Game;
-using Service;
 using UnityEngine;
 
-namespace Popup
+namespace GamePopup
 {
     public class PopupPauseComponent : GameComponent
     {

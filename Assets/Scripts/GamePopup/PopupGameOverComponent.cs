@@ -1,8 +1,7 @@
-using CollectBallsGame;
 using Game;
 using UnityEngine;
 
-namespace Popup
+namespace GamePopup
 {
     public class PopupGameOverComponent : GameComponent
     {
