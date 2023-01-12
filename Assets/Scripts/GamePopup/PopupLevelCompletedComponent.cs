@@ -25,7 +25,9 @@ namespace GamePopup
 
         private void OnScoreChanged()
         {
-            if (_gameModel.Score.Value >= _gameScene.MinAmountCollectBalls)
+            var isLastLevel = _gameModel.CurrentLevel == _gameScene.LevelsData.LevelNames.Count - 1;
+            
+            if (_gameModel.Score.Value >= _gameScene.MinAmountCollectBalls && !isLastLevel)
             {
                 PopupLevelCompleted.SetActive(true);
                 _gameModel.GameState.Value = GameState.LevelCompleted;
