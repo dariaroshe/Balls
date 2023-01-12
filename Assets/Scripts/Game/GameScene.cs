@@ -26,6 +26,7 @@ namespace Game
         public ButtonMenuComponent[] ButtonMenuComponent;
 
         public GameSaveComponent GameSaveComponent;
+        public GameLevelCompletedComponent GameLevelCompletedComponent;
         
         public int FailedBallsLooseValue;
         public int MinAmountCollectBalls;

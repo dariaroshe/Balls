@@ -5,6 +5,7 @@ namespace Game
         Playing,
         Paused,
         LevelCompleted,
-        GameOver
+        GameOver,
+        AllLevelsCompleted
     }
 }
