@@ -19,6 +19,7 @@ namespace Game
         public PopupGameOverComponent PopupGameOverComponent;
         public PopupLevelCompletedComponent PopupLevelCompletedComponent;
         public PopupPauseComponent PopupPauseComponent;
+        public PopupAllLevelsCompletedComponent PopupAllLevelsCompletedComponent;
         
         public ButtonNextLevelComponent ButtonNextLevelComponent;
         public ButtonReturnComponent ButtonReturnComponent;
