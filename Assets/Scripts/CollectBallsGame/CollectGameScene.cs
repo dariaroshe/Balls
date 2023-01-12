@@ -28,6 +28,7 @@ namespace CollectBallsGame
         public CollectButtonMenuComponent[] CollectButtonMenuComponent;
 
         public CollectGameSaveComponent CollectGameSaveComponent;
+        public CollectLevelCompleted CollectLevelCompleted;
         
         public int FailedBallsLooseValue;
         public int TotalCollectBalls;

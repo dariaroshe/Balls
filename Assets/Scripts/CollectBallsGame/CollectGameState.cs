@@ -5,6 +5,7 @@ namespace CollectBallsGame
         Playing,
         Paused,
         LevelCompleted,
-        GameOver
+        GameOver,
+        AllLevelsCompleted
     }
 }

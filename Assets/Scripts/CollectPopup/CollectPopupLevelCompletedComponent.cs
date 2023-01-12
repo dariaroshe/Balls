@@ -16,21 +16,20 @@ namespace CollectBallsGame
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
-            
-            _gameModel.Score.Changed += OnScoreChanged;
+
+            _gameModel.CollectGameState.Changed += OnScoreChanged;
         }
 
         private void OnDestroy()
         {
-            _gameModel.Score.Changed -= OnScoreChanged;
+            _gameModel.CollectGameState.Changed -= OnScoreChanged;
         }
 
         private void OnScoreChanged()
         {
-            if (_gameModel.Score.Value == _gameScene.TotalCollectBalls)
+            if (_gameModel.CollectGameState.Value == CollectGameState.LevelCompleted)
             {
                 PopupLevelCompleted.SetActive(true);
-                _gameModel.CollectGameState.Value = CollectGameState.LevelCompleted;
             }
         }
     }
