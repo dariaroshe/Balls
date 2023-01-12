@@ -14,23 +14,20 @@ namespace GamePopup
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
-            
-            _gameModel.Score.Changed += OnScoreChanged;
+
+            _gameModel.GameState.Changed += OnScoreChanged;
         }
 
         private void OnDestroy()
         {
-            _gameModel.Score.Changed -= OnScoreChanged;
+            _gameModel.GameState.Changed -= OnScoreChanged;
         }
 
         private void OnScoreChanged()
         {
-            var isLastLevel = _gameModel.CurrentLevel == _gameScene.LevelsData.LevelNames.Count - 1;
-            
-            if (_gameModel.Score.Value >= _gameScene.MinAmountCollectBalls && !isLastLevel)
+            if (_gameModel.GameState.Value == GameState.LevelCompleted)
             {
                 PopupLevelCompleted.SetActive(true);
-                _gameModel.GameState.Value = GameState.LevelCompleted;
             }
         }
     }
