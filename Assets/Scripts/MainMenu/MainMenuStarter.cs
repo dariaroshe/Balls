@@ -12,6 +12,7 @@ namespace MainMenu
             var mainMenuModel = new MainMenuModel();
             
             MenuScene.ButtonPlayComponent.Initialize(mainMenuModel, MenuScene);
+            MenuScene.ButtonSelectLevelComponent.Initialize(mainMenuModel, MenuScene);
         }
     }
 }

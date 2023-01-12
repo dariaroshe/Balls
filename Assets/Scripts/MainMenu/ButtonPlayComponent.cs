@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 namespace GameButton
 {
-    public class ButtonPlayComponent : MonoBehaviour
+    public class ButtonPlayComponent : MainMenuComponent
     {
         [SerializeField] private Button _buttonPlay;
 
         private MainMenuModel _menuModel;
         private MainMenuScene _menuScene;
 
-        public void Initialize(MainMenuModel menuModel, MainMenuScene menuScene)
+        public override void Initialize(MainMenuModel menuModel, MainMenuScene menuScene)
         {
             _menuModel = menuModel;
             _menuScene = menuScene;
