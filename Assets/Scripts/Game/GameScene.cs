@@ -28,6 +28,7 @@ namespace Game
 
         public GameSaveComponent GameSaveComponent;
         public GameLevelCompletedComponent GameLevelCompletedComponent;
+        public GameOverComponent GameOverComponent;
         
         public int FailedBallsLooseValue;
         public int MinAmountCollectBalls;

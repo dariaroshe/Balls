@@ -27,6 +27,7 @@ namespace Game
             GameScene.GameSaveComponent.Initialize(gameModel, GameScene);
             GameScene.GameLevelCompletedComponent.Initialize(gameModel, GameScene);
             GameScene.PopupAllLevelsCompletedComponent.Initialize(gameModel, GameScene);
+            GameScene.GameOverComponent.Initialize(gameModel, GameScene);
 
             for (int i = 0; i < GameScene.RigidbodyBallsComponent.Length; i++)
             {

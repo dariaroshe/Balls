@@ -10,15 +10,11 @@ namespace Game
         private GameModel _gameModel;
         private GameScene _gameScene;
 
-        private bool _reloaded;
-
-        [SerializeField] private string _level;
-        
         public override void Initialize(GameModel gameModel, GameScene gameScene)
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
-
+            
             _gameModel.FailedBalls.Changed += OnFailedBallsChanged;
         }
 
@@ -29,10 +25,9 @@ namespace Game
 
         private void OnFailedBallsChanged()
         {
-            if (_gameModel.FailedBalls.Value > _gameScene.FailedBallsLooseValue && !_reloaded)
+            if (_gameModel.FailedBalls.Value >= _gameScene.FailedBallsLooseValue)
             {
-                _reloaded = true;
-                SceneManager.LoadScene(_level);
+                _gameModel.GameState.Value = GameState.GameOver;
             }
         }
     }
