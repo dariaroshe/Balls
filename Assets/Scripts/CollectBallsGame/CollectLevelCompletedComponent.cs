@@ -1,6 +1,6 @@
 namespace CollectBallsGame
 {
-    public class CollectLevelCompleted : CollectGameComponent
+    public class CollectLevelCompletedComponent : CollectGameComponent
     {
         private CollectGameModel _gameModel;
         private CollectGameScene _gameScene;

@@ -31,7 +31,8 @@ namespace CollectBallsGame
             CollectGameScene.CollectButtonReturnComponent.Initialize(gameModel, CollectGameScene);
             CollectGameScene.CollectButtonContinueComponent.Initialize(gameModel, CollectGameScene);
             CollectGameScene.CollectGameSaveComponent.Initialize(gameModel, CollectGameScene);
-            CollectGameScene.CollectLevelCompleted.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectLevelCompletedComponent.Initialize(gameModel, CollectGameScene);
+            CollectGameScene.CollectPopupAllLevelsCompletedComponent.Initialize(gameModel, CollectGameScene);
 
             for (int i = 0; i < CollectGameScene.CollectButtonMenuComponent.Length; i++)
             {

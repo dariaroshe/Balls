@@ -21,6 +21,7 @@ namespace CollectBallsGame
         public CollectPopupGameOverComponent CollectPopupGameOverComponent;
         public CollectPopupLevelCompletedComponent CollectPopupLevelCompletedComponent;
         public CollectPopupPauseComponent CollectPopupPauseComponent;
+        public CollectPopupAllLevelsCompletedComponent CollectPopupAllLevelsCompletedComponent;
         
         public CollectButtonNextLevelComponent CollectButtonNextLevelComponent;
         public CollectButtonReturnComponent CollectButtonReturnComponent;
@@ -28,7 +29,7 @@ namespace CollectBallsGame
         public CollectButtonMenuComponent[] CollectButtonMenuComponent;
 
         public CollectGameSaveComponent CollectGameSaveComponent;
-        public CollectLevelCompleted CollectLevelCompleted;
+        public CollectLevelCompletedComponent CollectLevelCompletedComponent;
         
         public int FailedBallsLooseValue;
         public int TotalCollectBalls;
