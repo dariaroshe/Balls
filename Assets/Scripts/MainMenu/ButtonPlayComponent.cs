@@ -10,12 +10,12 @@ namespace GameButton
     {
         [SerializeField] private Button _buttonPlay;
 
-        private GameModel _gameModel;
+        private MainMenuModel _menuModel;
         private MainMenuScene _menuScene;
 
-        public void Initialize(GameModel gameModel, MainMenuScene menuScene)
+        public void Initialize(MainMenuModel menuModel, MainMenuScene menuScene)
         {
-            _gameModel = gameModel;
+            _menuModel = menuModel;
             _menuScene = menuScene;
             
             _buttonPlay.onClick.AddListener(OnButtonClick); 
