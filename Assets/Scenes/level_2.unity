@@ -1363,7 +1363,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 325021093}
-  - component: {fileID: 325021096}
   - component: {fileID: 325021095}
   - component: {fileID: 325021094}
   m_Layer: 5
@@ -1415,23 +1414,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 325021092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c77fe5f5f2f49a98ea855ea5b08e559, type: 3}
+  m_Script: {fileID: 11500000, guid: fb7a7e41f6114a8f8517bfbba9993cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonContinue: {fileID: 0}
---- !u!114 &325021096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325021092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8496e306208740a4ab694117ad6558b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PopupPause: {fileID: 861410207}
+  PopupAllLevelsCompleted: {fileID: 861410207}
 --- !u!1 &372471780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,6 +4344,7 @@ MonoBehaviour:
   CollectPopupGameOverComponent: {fileID: 1747957994}
   CollectPopupLevelCompletedComponent: {fileID: 432015001}
   CollectPopupPauseComponent: {fileID: 2064453745}
+  CollectPopupAllLevelsCompletedComponent: {fileID: 325021095}
   CollectButtonNextLevelComponent: {fileID: 432014999}
   CollectButtonReturnComponent: {fileID: 1747957993}
   CollectButtonContinueComponent: {fileID: 2064453744}
@@ -4365,7 +4352,9 @@ MonoBehaviour:
   - {fileID: 1747957995}
   - {fileID: 432015000}
   - {fileID: 2064453746}
+  - {fileID: 325021094}
   CollectGameSaveComponent: {fileID: 2142189083}
+  CollectLevelCompletedComponent: {fileID: 1903843535}
   FailedBallsLooseValue: 6
   TotalCollectBalls: 1
   LevelsData: {fileID: 11400000, guid: b7f7d4c2df988ac46b5a16b160ebbe1e, type: 2}
@@ -4607,6 +4596,49 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1903843533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903843534}
+  - component: {fileID: 1903843535}
+  m_Layer: 0
+  m_Name: LevelCompleted
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1903843534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903843533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 540, y: 960, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2108676142}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903843535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903843533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d535fc2ec5840a69f0b2a97d8fe10eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1922285027
 GameObject:
   m_ObjectHideFlags: 0
@@ -4880,6 +4912,7 @@ Transform:
   - {fileID: 1922285028}
   - {fileID: 1786926888}
   - {fileID: 2142189082}
+  - {fileID: 1903843534}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

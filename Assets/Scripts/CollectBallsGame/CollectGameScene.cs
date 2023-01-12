@@ -30,6 +30,7 @@ namespace CollectBallsGame
 
         public CollectGameSaveComponent CollectGameSaveComponent;
         public CollectLevelCompletedComponent CollectLevelCompletedComponent;
+        public CollectGameOverComponent CollectGameOverComponent;
         
         public int FailedBallsLooseValue;
         public int TotalCollectBalls;
