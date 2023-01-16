@@ -8,21 +8,23 @@ namespace SelectLevel
     public class TextLevelButtonsComponent : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _textLevelButton;
+        
+        private SelectLevelModel _selectLevelModel;
+        private SelectLevelScene _selectLevelScene;
+        private int _levelIndex;
 
-        public LevelsData LevelsData;
-
-        private void Start()
+        public void Initialize(SelectLevelModel selectLevelModel, SelectLevelScene selectLevelScene, int levelIndex)
         {
+            _selectLevelModel = selectLevelModel;
+            _selectLevelScene = selectLevelScene;
+            _levelIndex = levelIndex;
+            
             ChangedTextButton();
         }
 
         private void ChangedTextButton()
         {
-            for (int i = 0; i < LevelsData.LevelNames.Count; i++)
-            {
-                var numberLevel = i + 1;
-                _textLevelButton.text = numberLevel.ToString();
-            }
+            _textLevelButton.text = (_levelIndex + 1).ToString();
         }
     }
 }
