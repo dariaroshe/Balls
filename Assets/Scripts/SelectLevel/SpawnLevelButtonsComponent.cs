@@ -7,7 +7,7 @@ namespace SelectLevel
 {
     public class SpawnLevelButtonsComponent : SelectLevelComponent
     {
-        [SerializeField] private Button _buttonLevel;
+        [SerializeField] private TextLevelButtonsComponent _buttonLevel;
         [SerializeField] private Transform _gridTransform;
        
         private SelectLevelModel _selectLevelModel;
@@ -17,19 +17,16 @@ namespace SelectLevel
         {
             _selectLevelModel = selectLevelModel;
             _selectLevelScene = selectLevelScene;
-        }
-        
-        private void Start()
-        {
+            
             SpawnLevelButtons();
         }
-
+        
         private void SpawnLevelButtons()
         {
             for (int i = 0; i < _selectLevelScene.LevelsData.LevelNames.Count; i++)
             {
-                Instantiate(_buttonLevel, _gridTransform);
-                
+                var button = Instantiate(_buttonLevel, _gridTransform);
+                button.Initialize(_selectLevelModel, _selectLevelScene, i);
             }
         }
     }
