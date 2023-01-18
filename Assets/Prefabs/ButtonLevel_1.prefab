@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2507804119521813742}
   - component: {fileID: 2507804119521813741}
   - component: {fileID: 7300527615510133494}
+  - component: {fileID: 755254486437023298}
+  - component: {fileID: 6428447999232828726}
   m_Layer: 5
   m_Name: ButtonLevel_1
   m_TagString: Untagged
@@ -135,6 +137,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textLevelButton: {fileID: 2507804119652877487}
+--- !u!114 &755254486437023298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507804119521813739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc61e90f4a8047618ffbc5f24af17b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 2507804119521813741}
+--- !u!114 &6428447999232828726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507804119521813739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0029af69288d4753a5acc036d910408f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textLevelButton: {fileID: 7300527615510133494}
+  _clickLevelButton: {fileID: 755254486437023298}
 --- !u!1 &2507804119652877485
 GameObject:
   m_ObjectHideFlags: 0

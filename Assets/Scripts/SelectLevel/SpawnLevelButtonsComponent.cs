@@ -7,7 +7,7 @@ namespace SelectLevel
 {
     public class SpawnLevelButtonsComponent : SelectLevelComponent
     {
-        [SerializeField] private TextLevelButtonsComponent _buttonLevel;
+        [SerializeField] private LevelButtonComponent _buttonLevel;
         [SerializeField] private Transform _gridTransform;
        
         private SelectLevelModel _selectLevelModel;
