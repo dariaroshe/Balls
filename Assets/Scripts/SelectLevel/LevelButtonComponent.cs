@@ -9,6 +9,7 @@ namespace SelectLevel
     {
         [SerializeField] private TextLevelButtonsComponent _textLevelButton;
         [SerializeField] private ClickLevelButtonComponent _clickLevelButton;
+        [SerializeField] private BlockLevelButtonComponent _blockLevelButton;
 
         private SelectLevelModel _selectLevelModel;
         private SelectLevelScene _selectLevelScene;
@@ -22,6 +23,7 @@ namespace SelectLevel
             
             _textLevelButton.Initialize(_selectLevelModel, _selectLevelScene, _levelIndex);
             _clickLevelButton.Initialize(_selectLevelModel, _selectLevelScene, _levelIndex);
+            _blockLevelButton.Initialize(_selectLevelModel, _selectLevelScene, _levelIndex);
         }
     }
 }

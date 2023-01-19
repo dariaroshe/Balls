@@ -11,7 +11,7 @@ namespace Game
         {
             _gameModel = gameModel;
             _gameScene = gameScene;
-            
+
             _gameModel.GameState.Changed += OnGameStateChanged;
         }
 
@@ -24,7 +24,8 @@ namespace Game
         {
             if (_gameModel.GameState.Value == GameState.LevelCompleted)
             {
-               PlayerPrefs.SetInt("CurrentLevel", _gameModel.CurrentLevel);
+                Debug.Log(_gameModel.CurrentLevel);
+                PlayerPrefs.SetInt("CurrentLevel", _gameModel.CurrentLevel);
             }
         }
     }
