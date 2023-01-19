@@ -22,7 +22,7 @@ namespace Game
 
         private void OnGameStateChanged()
         {
-            if (_gameModel.GameState.Value == GameState.LevelCompleted)
+            if (_gameModel.GameState.Value == GameState.LevelCompleted || _gameModel.GameState.Value == GameState.AllLevelsCompleted)
             {
                 Debug.Log(_gameModel.CurrentLevel);
                 PlayerPrefs.SetInt("CurrentLevel", _gameModel.CurrentLevel);
