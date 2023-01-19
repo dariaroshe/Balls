@@ -16,8 +16,8 @@ namespace MainMenuButtons
         {
             _menuModel = menuModel;
             _menuScene = menuScene;
-            
-            _buttonPlay.onClick.AddListener(OnButtonClick); 
+
+            _buttonPlay.onClick.AddListener(OnButtonClick);
         }
 
         private void OnDestroy()
@@ -27,8 +27,9 @@ namespace MainMenuButtons
 
         private void OnButtonClick()
         {
-            var currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
-            var currentLevelName = _menuScene.LevelsData.LevelNames[currentLevel];
+            var currentLevel = PlayerPrefs.GetInt("CurrentLevel", -1);
+            var nextLevel = Mathf.Clamp(currentLevel + 1, 0, _menuScene.LevelsData.LevelNames.Count - 1);
+            var currentLevelName = _menuScene.LevelsData.LevelNames[nextLevel];
             SceneManager.LoadScene(currentLevelName);
         }
     }
