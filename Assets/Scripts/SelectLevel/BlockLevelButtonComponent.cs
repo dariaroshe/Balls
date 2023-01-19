@@ -28,8 +28,6 @@ namespace SelectLevel
             {
                 _blockImage.gameObject.SetActive(false);
             }
-            
-            Debug.Log(levelCompleted);
         }
     }
 }

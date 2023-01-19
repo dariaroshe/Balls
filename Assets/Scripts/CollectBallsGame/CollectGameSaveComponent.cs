@@ -22,10 +22,17 @@ namespace CollectBallsGame
 
         private void OnGameStateChanged()
         {
-            if (_gameModel.CollectGameState.Value == CollectGameState.LevelCompleted || _gameModel.CollectGameState.Value == CollectGameState.AllLevelsCompleted)
+            var levelCompleted = PlayerPrefs.GetInt("CurrentLevel", 0);
+            
+            if (levelCompleted >= _gameModel.CurrentLevel)
             {
-                Debug.Log(_gameModel.CurrentLevel);
+                return;
+            }
 
+            var gameState = _gameModel.CollectGameState.Value;
+            
+            if (gameState == CollectGameState.LevelCompleted || gameState == CollectGameState.AllLevelsCompleted)
+            {
                 PlayerPrefs.SetInt("CurrentLevel", _gameModel.CurrentLevel);
             }
         }
