@@ -29,7 +29,12 @@ namespace SelectLevel
 
         private void OnButtonClicked()
         {
-            SceneManager.LoadScene(_selectLevelScene.LevelsData.LevelNames[_levelIndex]);
+            var levelCompleted = PlayerPrefs.GetInt("CurrentLevel", 0);
+
+            if (_levelIndex <= levelCompleted)
+            {
+                SceneManager.LoadScene(_selectLevelScene.LevelsData.LevelNames[_levelIndex]);
+            }
         }
     }
 }
