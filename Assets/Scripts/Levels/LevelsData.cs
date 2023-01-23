@@ -7,5 +7,15 @@ namespace Levels
     public class LevelsData : ScriptableObject
     {
         public List<string> LevelNames;
+
+        public int GetNextLevel(int currentLevel)
+        {
+            if (currentLevel >= LevelNames.Count)
+            {
+                return LevelNames.Count - 1;
+            }
+
+            return currentLevel;
+        }
     }
 }

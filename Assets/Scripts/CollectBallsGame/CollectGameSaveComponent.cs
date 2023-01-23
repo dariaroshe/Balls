@@ -33,7 +33,8 @@ namespace CollectBallsGame
             
             if (gameState == CollectGameState.LevelCompleted || gameState == CollectGameState.AllLevelsCompleted)
             {
-                PlayerPrefs.SetInt("CurrentLevel", _gameModel.CurrentLevel);
+                var nextLevel = _gameScene.LevelsData.GetNextLevel(_gameModel.CurrentLevel);
+                PlayerPrefs.SetInt("CurrentLevel", nextLevel);
             }
         }
     }

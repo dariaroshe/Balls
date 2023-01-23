@@ -15,12 +15,12 @@ namespace GamePopup
             _gameModel = gameModel;
             _gameScene = gameScene;
 
-            _gameModel.FailedBalls.Changed += OnFailedBallsChanged;
+            _gameModel.GameState.Changed += OnFailedBallsChanged;
         }
 
         private void OnDestroy()
         {
-            _gameModel.FailedBalls.Changed -= OnFailedBallsChanged;
+            _gameModel.GameState.Changed -= OnFailedBallsChanged;
         }
 
         private void OnFailedBallsChanged()

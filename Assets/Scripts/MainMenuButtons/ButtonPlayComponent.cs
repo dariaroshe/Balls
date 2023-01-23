@@ -27,9 +27,8 @@ namespace MainMenuButtons
 
         private void OnButtonClick()
         {
-            var currentLevel = PlayerPrefs.GetInt("CurrentLevel", -1);
-            var nextLevel = Mathf.Clamp(currentLevel + 1, 0, _menuScene.LevelsData.LevelNames.Count - 1);
-            var currentLevelName = _menuScene.LevelsData.LevelNames[nextLevel];
+            var currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
+            var currentLevelName = _menuScene.LevelsData.LevelNames[currentLevel];
             SceneManager.LoadScene(currentLevelName);
         }
     }

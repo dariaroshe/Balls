@@ -33,7 +33,8 @@ namespace Game
             
             if (gameState == GameState.LevelCompleted || gameState == GameState.AllLevelsCompleted)
             {
-                PlayerPrefs.SetInt("CurrentLevel", _gameModel.CurrentLevel);
+                var nextLevel = _gameScene.LevelsData.GetNextLevel(_gameModel.CurrentLevel);
+                PlayerPrefs.SetInt("CurrentLevel", nextLevel);
             }
         }
     }

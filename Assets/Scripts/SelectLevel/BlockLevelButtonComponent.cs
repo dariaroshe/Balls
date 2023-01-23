@@ -22,9 +22,9 @@ namespace SelectLevel
 
         private void UnblockLevelButton()
         {
-            var levelCompleted = PlayerPrefs.GetInt("CurrentLevel", -1);
+            var currentLevel = PlayerPrefs.GetInt("CurrentLevel", 0);
 
-            if (_levelIndex <= levelCompleted + 1)
+            if (_levelIndex <= currentLevel)
             {
                 _blockImage.gameObject.SetActive(false);
             }
